@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Hind', sans-serif; 
+        }
+        .nopadding{
+            padding: 0px;
+        }
+        .btn_font{
+            font-size: 30px;
+        }
+        .output {
+            grid-column: 1 / -1;
+            background-color: rgba(0, 0, 0, .75);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: 35px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .output .previous-operand {
+            color: rgba(255, 255, 255, .75);
+            font-size: 1.5rem;
+        }
+        .output .current-operand {
+            color: white;
+            font-size: 2.5rem;
+        }
+    </style>
+    <script src="kalku2.js" defer></script>
+</head>
+<body style="background: rgba(0, 0, 0, 0.795);">
+    <h1 class="text-center" style="color: white; font-family: 'Hind', sans-serif; padding-top: 20px; font-weight: bold;">Calculator</h1>
+    <div class="container"style="padding: 50px 300px 50px 300px; border: 1px solid grey;margin-top: 50px;background: whitesmoke; box-shadow: 5px 5px #525252; border-radius: 10px;">
+        <br>
+        <div class="row">
+            <div class="output">
+                <div class="col-lg-12 nopadding">
+                    <div data-previous-operand class="previous-operand" class="form-control"></div>
+                    <div data-current-operand class="current-operand" class="form-control"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 nopadding">
+                <button data-all-clear class="span-two btn btn-danger btn-block btn_font">AC</button>
+            </div>            
+            <div class="col-xs-3 nopadding">
+                <button data-delete class="btn btn-danger btn-block btn_font">DEL</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-operation class="btn btn-success btn-block btn_font">/</button>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">1</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">2</button>
+            </div>
+             <div class="col-xs-3 nopadding">
+                <button data-number  class="btn btn-default btn-block btn_font">3</button>    
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-operation class="btn btn-success btn-block btn_font">*</button>
+            </div>           
+        </div>
+        <div class="row">
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">4</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">5</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">6</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-operation class="btn btn-success btn-block btn_font">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">7</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">8</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">9</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-operation class="btn btn-success btn-block btn_font">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">0</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-number class="btn btn-default btn-block btn_font">.</button>
+            </div>
+            <div class="col-xs-3 nopadding">
+                <button data-equals class="span-two btn btn-success btn-block btn_font">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
